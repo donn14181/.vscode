@@ -1,0 +1,201 @@
+body {
+    background-color: rgb(31, 88, 104);
+    font-family: "Open Sans", sans-serif;
+    margin: 0;
+    padding: 40px;
+    color: white;
+}
+
+h1 {
+    text-align: center;
+    font-size: 60px;
+    color: rgb(255,230,120);
+    margin-bottom: 50px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 60px;
+}
+
+.left img {
+    width: 420px;
+    height: 520px;
+    object-fit: cover;
+    border: 4px solid white;
+    border-radius: 15px;
+}
+
+.middle {
+    width: 360px;
+}
+
+.middle label {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.middle input[type=text],
+.middle input[type=email],
+.middle input[type=tel],
+.middle textarea {
+
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    margin-bottom: 15px;
+    border: none;
+    border-bottom: 3px solid white;
+    background: transparent;
+    color: white;
+    font-size: 18px;
+    outline: none;
+}
+
+.middle input::placeholder,
+.middle textarea::placeholder {
+
+    color: rgb(220,220,220);
+}
+
+.middle textarea {
+
+    height: 120px;
+    resize: none;
+}
+
+.middle input[type=submit] {
+
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 30px;
+    background: rgb(255,230,120);
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.middle input[type=submit]:hover {
+
+    background: white;
+}
+
+.right {
+
+    width: 220px;
+}
+
+.right h2 {
+
+    color: rgb(255,230,120);
+}
+
+.right p {
+
+    font-size: 20px;
+}
+
+.icons {
+
+    margin-top: 40px;
+}
+
+.icon-row {
+
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.fa {
+
+    width: 40px;
+    padding: 22px;
+    font-size: 38px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    transition: .3s;
+}
+
+.fa:hover {
+
+    transform: scale(1.1);
+}
+
+.fa-facebook {
+
+    background: #3B5998;
+    color: white;
+}
+
+.fa-instagram {
+
+    background: #E4405F;
+    color: white;
+}
+
+.fa-linkedin {
+
+    background: #0077B5;
+    color: white;
+}
+
+.dropbtn {
+
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 22px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.dropdown {
+
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
+.dropdown-content {
+
+    display: none;
+    position: absolute;
+    right: 0;
+    background: white;
+    min-width: 180px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0,0,0,.3);
+}
+
+.dropdown-content a {
+
+    display: block;
+    padding: 14px 18px;
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+
+.dropdown-content a:hover {
+
+    background: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+
+    background: #3e8e41;
+}

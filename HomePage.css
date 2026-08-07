@@ -1,0 +1,30 @@
+body {
+    background-color: #68B559;
+    font-family: "Fantasy", Papyrus;
+    padding: 5px 25px;
+    font-size: 25px;
+    margin: 0;
+    text-align: center;
+}
+
+nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 5;
+  border: 5px solid;
+  background-color: #A6A14C;
+  overflow: hidden;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    color: blue;
+    padding: 8px 15px;
+}
+
+li a:hover{
+    background-color: white;
+}
