@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Merch</title>
+
+    <link rel="stylesheet" href="Merch.css">
+
+</head>
+
+<body>
+
+    <div class="dropdown">
+
+        <button class="dropbtn">▼</button>
+
+        <div class="dropdown-content">
+
+            <a href="HomePage.html">Home</a>
+            <a href="AboutUs.html">About Us</a>
+            <a href="ContactUs.html">Contact Us</a>
+            <a href="Gameplay.html">Gameplay</a>
+            <a href="Merch.html">Merch</a>
+
+        </div>
+
+    </div>
+
+
+    <h1><u>Merch</u></h1>
+
+
+    <div class="shop-controls">
+
+        <input
+            type="text"
+            id="searchBar"
+            placeholder="Search products..."
+        >
+
+        <button class="cart-button" onclick="toggleCart()">
+            🛒 <span id="cartCount">0</span>
+        </button>
+
+    </div>
+
+
+    <div class="category-buttons">
+
+        <button onclick="scrollToSection('all-products')">
+            All Products
+        </button>
+
+        <button onclick="scrollToSection('caps')">
+            Caps
+        </button>
+
+        <button onclick="scrollToSection('hoodies')">
+            Hoodies
+        </button>
+
+        <button onclick="scrollToSection('tshirts')">
+            T-Shirts
+        </button>
+
+        <button onclick="scrollToSection('plushies')">
+            Plushies
+        </button>
+
+    </div>
+
+
+    <div id="cart" class="cart">
+
+        <h2>Your Cart</h2>
+
+        <p>
+            Number of Items:
+            <span id="cartItems">0</span>
+        </p>
+
+        <div id="cartProducts"></div>
+
+        <button onclick="toggleCart()">Close Cart</button>
+
+    </div>
+
+
+    <h2 id="all-products">All Products</h2>
+
+
+    <div class="product-section">
+
+        <h3 id="caps">Caps</h3>
+
+        <div class="products">
+
+            <div class="product">
+
+                <img src="HatBlue.jpg">
+
+                <h4>Cyan Cap</h4>
+
+                <p>€15.00</p>
+
+                <button onclick="addToCart('Cyan Cap', 15)">
+                Add to Cart
+                </button>
+
+            </div>
+
+
+            <div class="product">
+
+                <img src="HatBrown.jpg">
+
+                <h4>Brown Cap</h4>
+
+                <p>€15.00</p>
+
+                <button onclick="addToCart('Brown Cap', 15)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+
+            <div class="product">
+
+                <img src="HatNavy.avif">
+
+                <h4>Blue Cap</h4>
+
+                <p>€15.00</p>
+
+                <button onclick="addToCart('Navy Cap', 15)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+
+            <div class="product">
+
+                <img src="HatRed.jpg">
+
+                <h4>Red Cap</h4>
+
+                <p>€15.00</p>
+
+                <button onclick="addToCart('Red Cap', 15)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="product-section">
+
+        <h3 id="hoodies">Hoodies</h3>
+
+        <div class="products">
+
+            <div class="product">
+
+                <img src="HoodieBlack.webp">
+
+                <h4>Black Hoodie</h4>
+
+                <p>€40.00</p>
+
+                <button onclick="addToCart('Black Hoodie', 40)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+
+            <div class="product">
+
+                <img src="HoodieBlue.jpg">
+
+                <h4>Cyan Hoodie</h4>
+
+                <p>€40.00</p>
+
+                <button onclick="addToCart('Cyan Hoodie', 40)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+
+            <div class="product">
+
+                <img src="HoodieCream.avif">
+
+                <h4>Cream Hoodie</h4>
+
+                <p>€40.00</p>
+
+                <button onclick="addToCart('Cream Hoodie', 40)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+
+            <div class="product">
+
+                <img src="HoodieGrey.jpg">
+
+                <h4>Grey Hoodie</h4>
+
+                <p>€40.00</p>
+
+                <button onclick="addToCart('Grey Hoodie', 40)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+
+            <div class="product">
+
+                <img src="HoodieOrange.jpg">
+
+                <h4>Orange Hoodie</h4>
+
+                <p>€40.00</p>
+
+                <button onclick="addToCart('Orange Hoodie', 40)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="product-section">
+
+        <h3 id="tshirts">T-Shirts</h3>
+
+        <div class="products">
+
+            <div class="product">
+
+                <img src="ShirtGrey.jpg">
+
+                <h4>Grey T-Shirt</h4>
+
+                <p>€25.00</p>
+
+                <button onclick="addToCart('Grey T-Shirt', 25)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+
+            <div class="product">
+
+                <img src="ShirtOrange.webp">
+
+                <h4>Salmon T-Shirt</h4>
+
+                <p>€25.00</p>
+
+                <button onclick="addToCart('Orange T-Shirt', 25)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+
+            <div class="product">
+
+                <img src="ShirtPurple.jpg">
+
+                <h4>Maroon T-Shirt</h4>
+
+                <p>€25.00</p>
+
+                <button onclick="addToCart('Maroon T-Shirt', 25)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="product-section">
+
+        <h3 id="plushies">Plushies</h3>
+
+        <div class="products">
+
+            <div class="product">
+
+                <img src="Bunny1.jpg">
+
+                <h4>Brown Bunny Plushie</h4>
+
+                <p>€20.00</p>
+
+                <button onclick="addToCart('Brown Bunny Plushie', 20)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+
+            <div class="product">
+
+                <img src="Bunny2.jpg">
+
+                <h4>Grey Bunny Plushie</h4>
+
+                <p>€20.00</p>
+
+                <button onclick="addToCart('Grey Bunny Plushie', 20)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+
+            <div class="product">
+
+                <img src="Bunny3.jpeg">
+
+                <h4>White Bunny Plushie</h4>
+
+                <p>€20.00</p>
+
+                <button onclick="addToCart('White Bunny Plushie', 20)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="Merch.js"></script>
+
+</body>
+
+</html>
