@@ -1,4 +1,11 @@
-let cart = [];
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+
+function saveCart() {
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+}
 
 
 function addToCart(name, price) {
@@ -6,6 +13,7 @@ function addToCart(name, price) {
     let existingProduct = cart.find(
         product => product.name === name
     );
+
 
     if (existingProduct) {
 
@@ -21,6 +29,9 @@ function addToCart(name, price) {
 
     }
 
+
+    saveCart();
+
     updateCart();
 
 }
@@ -29,6 +40,7 @@ function addToCart(name, price) {
 function updateCart() {
 
     let totalItems = 0;
+
 
     cart.forEach(product => {
 
@@ -42,7 +54,9 @@ function updateCart() {
     document.getElementById("cartItems").textContent = totalItems;
 
 
-    let cartProducts = document.getElementById("cartProducts");
+    let cartProducts =
+        document.getElementById("cartProducts");
+
 
     cartProducts.innerHTML = "";
 
@@ -53,19 +67,31 @@ function updateCart() {
 
         item.className = "cart-item";
 
+
         item.innerHTML = `
+
             <p>
+
                 ${product.name}
+
                 <br>
+
                 €${product.price.toFixed(2)}
+
                 <br>
+
                 Quantity: ${product.quantity}
+
             </p>
 
             <button onclick="removeFromCart(${index})">
+
                 Remove
+
             </button>
+
         `;
+
 
         cartProducts.appendChild(item);
 
@@ -86,6 +112,9 @@ function removeFromCart(index) {
 
     }
 
+
+    saveCart();
+
     updateCart();
 
 }
@@ -93,7 +122,9 @@ function removeFromCart(index) {
 
 function toggleCart() {
 
-    let cartBox = document.getElementById("cart");
+    let cartBox =
+        document.getElementById("cart");
+
 
     if (cartBox.style.display === "block") {
 
@@ -110,60 +141,105 @@ function toggleCart() {
 
 function scrollToSection(section) {
 
-    document.getElementById(section).scrollIntoView({
-        behavior: "smooth"
-    });
+    document
+        .getElementById(section)
+        .scrollIntoView({
+            behavior: "smooth"
+        });
 
 }
 
 
-document.getElementById("searchBar").addEventListener("keyup", function() {
+function showAllProducts() {
 
-    let search = this.value.toLowerCase();
-
-    let sections = document.querySelectorAll(".product-section");
+    let sections =
+        document.querySelectorAll(".product-section");
 
 
     sections.forEach(section => {
 
-        let products = section.querySelectorAll(".product");
+        section.style.display = "block";
 
-        let foundProduct = false;
+
+        let products =
+            section.querySelectorAll(".product");
 
 
         products.forEach(product => {
 
-            let name = product
-                .querySelector("h4")
-                .textContent
-                .toLowerCase();
+            product.style.display = "block";
+
+        });
+
+    });
 
 
-            if (name.includes(search)) {
+    document.getElementById("all-products")
+        .scrollIntoView({
+            behavior: "smooth"
+        });
 
-                product.style.display = "block";
+}
 
-                foundProduct = true;
+
+document
+    .getElementById("searchBar")
+    .addEventListener("keyup", function() {
+
+        let search =
+            this.value.toLowerCase();
+
+
+        let sections =
+            document.querySelectorAll(".product-section");
+
+
+        sections.forEach(section => {
+
+            let products =
+                section.querySelectorAll(".product");
+
+
+            let foundProduct = false;
+
+
+            products.forEach(product => {
+
+                let name =
+                    product
+                        .querySelector("h4")
+                        .textContent
+                        .toLowerCase();
+
+
+                if (name.includes(search)) {
+
+                    product.style.display = "block";
+
+                    foundProduct = true;
+
+                } else {
+
+                    product.style.display = "none";
+
+                }
+
+            });
+
+
+            if (foundProduct) {
+
+                section.style.display = "block";
 
             } else {
 
-                product.style.display = "none";
+                section.style.display = "none";
 
             }
 
         });
 
-
-        if (foundProduct) {
-
-            section.style.display = "block";
-
-        } else {
-
-            section.style.display = "none";
-
-        }
-
     });
 
-});
+
+updateCart();

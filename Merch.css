@@ -7,24 +7,31 @@ body {
     color: white;
 }
 
+
 h1 {
     font-size: 42px;
     margin-bottom: 30px;
 }
+
 
 h2,
 h3 {
     color: rgb(255, 230, 120);
 }
 
+
 h2 {
     margin-top: 30px;
 }
+
 
 h3 {
     margin-top: 50px;
     font-size: 28px;
 }
+
+
+/* Search and cart */
 
 .shop-controls {
     display: flex;
@@ -34,6 +41,7 @@ h3 {
     margin-bottom: 30px;
 }
 
+
 #searchBar {
     width: 350px;
     padding: 14px;
@@ -41,7 +49,9 @@ h3 {
     border-radius: 25px;
     font-size: 18px;
     outline: none;
+    box-sizing: border-box;
 }
+
 
 .cart-button {
     background-color: rgb(255, 230, 120);
@@ -55,10 +65,14 @@ h3 {
     cursor: pointer;
 }
 
+
 .cart-button:hover {
     background-color: white;
     transform: scale(1.08);
 }
+
+
+/* Category buttons */
 
 .category-buttons {
     display: flex;
@@ -67,6 +81,7 @@ h3 {
     flex-wrap: wrap;
     margin: 30px 0 40px;
 }
+
 
 .category-buttons button {
     background-color: rgb(255, 230, 120);
@@ -80,14 +95,19 @@ h3 {
     transition: 0.3s;
 }
 
+
 .category-buttons button:hover {
     background-color: white;
     transform: scale(1.05);
 }
 
+
+/* Product sections */
+
 .product-section {
     margin-bottom: 50px;
 }
+
 
 .products {
     display: flex;
@@ -97,6 +117,9 @@ h3 {
     margin-bottom: 40px;
 }
 
+
+/* Product */
+
 .product {
     width: 220px;
     background-color: rgb(54, 111, 128);
@@ -104,11 +127,14 @@ h3 {
     border-radius: 12px;
     padding: 15px;
     transition: transform 0.3s;
+    box-sizing: border-box;
 }
+
 
 .product:hover {
     transform: scale(1.05);
 }
+
 
 .product img {
     width: 200px;
@@ -117,11 +143,26 @@ h3 {
     border-radius: 8px;
 }
 
+
+/* Make bunny images bigger */
+
+#bunnies + .products .product {
+    width: 240px;
+}
+
+
+#bunnies + .products .product img {
+    width: 220px;
+    height: 220px;
+}
+
+
 .product h4 {
     font-size: 20px;
     margin: 12px 0 5px;
     color: white;
 }
+
 
 .product p {
     font-size: 18px;
@@ -129,6 +170,9 @@ h3 {
     color: rgb(255, 230, 120);
     margin: 5px;
 }
+
+
+/* Add to cart */
 
 .product button {
     background-color: rgb(255, 230, 120);
@@ -142,103 +186,271 @@ h3 {
     margin-top: 10px;
 }
 
+
 .product button:hover {
     background-color: white;
 }
 
+
+/* Cart */
+
 .cart {
     display: none;
     position: fixed;
-    top: 90px;
+    top: 70px;
     right: 20px;
-    width: 300px;
-    max-height: 500px;
+
+    width: 400px;
+    max-width: calc(100% - 40px);
+
+    max-height: calc(100vh - 100px);
+
     overflow-y: auto;
+
     background-color: white;
     color: black;
-    padding: 20px;
-    border-radius: 12px;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+
     z-index: 999;
+
+    box-sizing: border-box;
 }
+
 
 .cart h2 {
     margin-top: 0;
+    color: rgb(31, 88, 104);
+    font-size: 32px;
 }
+
+
+.cart-number {
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
 
 .cart-item {
     border-bottom: 1px solid #ccc;
-    padding: 10px 0;
+    padding: 15px 0;
 }
+
 
 .cart-item p {
     margin: 5px;
     color: black;
+    font-size: 18px;
 }
+
 
 .cart-item button {
     background-color: #d9534f;
     color: white;
     border: none;
-    padding: 7px 12px;
-    border-radius: 5px;
+    padding: 9px 15px;
+    border-radius: 7px;
     cursor: pointer;
+    font-size: 16px;
 }
 
-.cart > button {
+
+.cart-item button:hover {
+    background-color: #c9302c;
+}
+
+
+/* Cart buttons */
+
+.cart-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+
+.checkout-button {
+    display: inline-block;
+
+    background-color: rgb(255, 230, 120);
+    color: black;
+
+    padding: 14px 30px;
+
+    border-radius: 25px;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    box-sizing: border-box;
+}
+
+
+.checkout-button:hover {
     background-color: rgb(31, 88, 104);
     color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 20px;
-    cursor: pointer;
 }
+
+
+.close-cart-button {
+    background-color: rgb(31, 88, 104);
+    color: white;
+
+    border: none;
+
+    padding: 14px 25px;
+
+    border-radius: 25px;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    box-sizing: border-box;
+}
+
+
+.close-cart-button:hover {
+    background-color: rgb(54, 111, 128);
+}
+
+
+/* Dropdown */
 
 .dropbtn {
     background-color: #4CAF50;
     color: white;
+
     padding: 16px;
+
     font-size: 22px;
+
     border: none;
+
     cursor: pointer;
+
     border-radius: 8px;
 }
 
+
 .dropdown {
     position: fixed;
+
     top: 20px;
     right: 20px;
+
     display: inline-block;
+
     z-index: 1000;
 }
 
+
 .dropdown-content {
     display: none;
+
     position: absolute;
+
     right: 0;
+
     background-color: white;
+
     min-width: 180px;
+
     border-radius: 10px;
+
     overflow: hidden;
+
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
+
 .dropdown-content a {
     display: block;
+
     padding: 14px 18px;
+
     color: black;
+
     text-decoration: none;
+
     font-size: 18px;
 }
+
 
 .dropdown-content a:hover {
     background-color: #f1f1f1;
 }
 
+
 .dropdown:hover .dropdown-content {
     display: block;
 }
 
+
 .dropdown:hover .dropbtn {
     background-color: #3e8e41;
+}
+
+
+/* Mobile */
+
+@media (max-width: 800px) {
+
+    .shop-controls {
+        flex-direction: column;
+    }
+
+    #searchBar {
+        width: 90%;
+        max-width: 350px;
+    }
+
+    .cart {
+        right: 10px;
+        width: 400px;
+        max-width: calc(100% - 20px);
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .products {
+        gap: 15px;
+    }
+
+    .product {
+        width: 90%;
+        max-width: 300px;
+    }
+
+    .product img {
+        width: 250px;
+        max-width: 100%;
+        height: 250px;
+    }
+
+    #bunnies + .products .product {
+        width: 90%;
+        max-width: 300px;
+    }
+
+    #bunnies + .products .product img {
+        width: 250px;
+        max-width: 100%;
+        height: 250px;
+    }
+
 }

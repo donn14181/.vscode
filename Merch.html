@@ -48,78 +48,212 @@
 
     <div class="category-buttons">
 
-        <button onclick="scrollToSection('all-products')">
+        <button onclick="showAllProducts()">
             All Products
         </button>
 
-        <button onclick="scrollToSection('caps')">
-            Caps
+        <button onclick="scrollToSection('bunnies')">
+            Bunny
         </button>
 
-        <button onclick="scrollToSection('hoodies')">
-            Hoodies
+        <button onclick="scrollToSection('pigs')">
+            Pig
         </button>
 
-        <button onclick="scrollToSection('tshirts')">
-            T-Shirts
+        <button onclick="scrollToSection('carrots')">
+            Carrot
         </button>
 
-        <button onclick="scrollToSection('plushies')">
-            Plushies
+        <button onclick="scrollToSection('scarecrows')">
+            Scarecrow
         </button>
 
     </div>
 
 
+    <!-- Cart -->
+
     <div id="cart" class="cart">
 
         <h2>Your Cart</h2>
 
-        <p>
+        <p class="cart-number">
             Number of Items:
             <span id="cartItems">0</span>
         </p>
 
         <div id="cartProducts"></div>
 
-        <button onclick="toggleCart()">Close Cart</button>
+        <div class="cart-buttons">
+
+            <a href="Checkout.html" class="checkout-button">
+                Checkout
+            </a>
+
+            <button
+                class="close-cart-button"
+                onclick="toggleCart()">
+                Close Cart
+            </button>
+
+        </div>
 
     </div>
 
+
+    <!-- All Products -->
 
     <h2 id="all-products">All Products</h2>
 
 
-    <div class="product-section">
+<!-- Bunnies -->
 
-        <h3 id="caps">Caps</h3>
+<div class="product-section">
 
-        <div class="products">
+    <h3 id="bunnies">Bunnies</h3>
 
-            <div class="product">
+    <div class="products">
 
-                <img src="HatBlue.jpg">
+        <div class="product">
 
-                <h4>Cyan Cap</h4>
+            <img src="BunnyBag.png">
 
-                <p>€15.00</p>
+            <h4>Tote bag</h4>
 
-                <button onclick="addToCart('Cyan Cap', 15)">
+            <p>€15.00</p>
+
+            <button onclick="addToCart('Tote bag', 15)">
                 Add to Cart
-                </button>
+            </button>
 
-            </div>
+        </div>
 
+
+        <div class="product">
+
+            <img src="BunnyMug.png">
+
+            <h4>Coffee Mug</h4>
+
+            <p>€15.00</p>
+
+            <button onclick="addToCart('Coffee Mug', 15)">
+                Add to Cart
+            </button>
+
+        </div>
+
+
+        <div class="product">
+
+            <img src="BunnyPillow.png">
+
+            <h4>Pillow</h4>
+
+            <p>€15.00</p>
+
+            <button onclick="addToCart('Pillow', 15)">
+                Add to Cart
+            </button>
+
+        </div>
+
+
+        <div class="product">
+
+            <img src="BunnyShirt.png">
+
+            <h4>Boris Shirt</h4>
+
+            <p>€15.00</p>
+
+            <button onclick="addToCart('Boris Shirt', 15)">
+                Add to Cart
+            </button>
+
+        </div>
+
+
+        <div class="product">
+
+            <img src="Bunny1.png">
+
+            <h4>Black Bunny</h4>
+
+            <p>€20.00</p>
+
+            <button onclick="addToCart('Black Bunny', 20)">
+                Add to Cart
+            </button>
+
+        </div>
+
+
+        <div class="product">
+
+            <img src="Bunny2.png">
+
+            <h4>New Zeland Bunny</h4>
+
+            <p>€20.00</p>
+
+            <button onclick="addToCart('New Zeland Bunny', 20)">
+                Add to Cart
+            </button>
+
+        </div>
+
+
+        <div class="product">
+
+            <img src="Bunny3.png">
+
+            <h4>Really Tall Bunny</h4>
+
+            <p>€20.00</p>
+
+            <button onclick="addToCart('Really Tall Bunny', 20)">
+                Add to Cart
+            </button>
+
+        </div>
+
+        <div class="product">
+
+            <img src="Bunny4.png">
+
+            <h4>Bunny?</h4>
+
+            <p>€20.00</p>
+
+            <button onclick="addToCart('Bunny?', 20)">
+                Add to Cart
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+    <!-- Pigs -->
+
+    <div class="product-section">
+
+        <h3 id="pigs">Pigs</h3>
+
+        <div class="products">
 
             <div class="product">
 
-                <img src="HatBrown.jpg">
+                <img src="PigArt.png">
 
-                <h4>Brown Cap</h4>
+                <h4>Pig Poster</h4>
 
-                <p>€15.00</p>
+                <p>€40.00</p>
 
-                <button onclick="addToCart('Brown Cap', 15)">
+                <button onclick="addToCart('Pig Poster', 40)">
                     Add to Cart
                 </button>
 
@@ -128,13 +262,13 @@
 
             <div class="product">
 
-                <img src="HatNavy.avif">
+                <img src="PigBag.png">
 
-                <h4>Blue Cap</h4>
+                <h4>Pig Tote Bag</h4>
 
-                <p>€15.00</p>
+                <p>€40.00</p>
 
-                <button onclick="addToCart('Navy Cap', 15)">
+                <button onclick="addToCart('Pig Tote Bag', 40)">
                     Add to Cart
                 </button>
 
@@ -143,13 +277,43 @@
 
             <div class="product">
 
-                <img src="HatRed.jpg">
+                <img src="PigMug.png">
 
-                <h4>Red Cap</h4>
+                <h4>Pig Coffee Mug</h4>
 
-                <p>€15.00</p>
+                <p>€40.00</p>
 
-                <button onclick="addToCart('Red Cap', 15)">
+                <button onclick="addToCart('Pig Coffee Mug', 40)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+
+            <div class="product">
+
+                <img src="PigPhone.png">
+
+                <h4>Pig Phone Case</h4>
+
+                <p>€40.00</p>
+
+                <button onclick="addToCart('Pig Phone Case', 40)">
+                    Add to Cart
+                </button>
+
+            </div>
+
+
+            <div class="product">
+
+                <img src="PigShirt.png">
+
+                <h4>Pig T-Shirt</h4>
+
+                <p>€40.00</p>
+
+                <button onclick="addToCart('Pig T-Shirt', 40)">
                     Add to Cart
                 </button>
 
@@ -160,21 +324,23 @@
     </div>
 
 
+    <!-- Carrots -->
+
     <div class="product-section">
 
-        <h3 id="hoodies">Hoodies</h3>
+        <h3 id="carrots">Carrots</h3>
 
         <div class="products">
 
             <div class="product">
 
-                <img src="HoodieBlack.webp">
+                <img src="CarrottMug.png">
 
-                <h4>Black Hoodie</h4>
+                <h4>Carrot Coffee Mug</h4>
 
-                <p>€40.00</p>
+                <p>€15.00</p>
 
-                <button onclick="addToCart('Black Hoodie', 40)">
+                <button onclick="addToCart('Carrot Coffee Mug', 15)">
                     Add to Cart
                 </button>
 
@@ -183,13 +349,13 @@
 
             <div class="product">
 
-                <img src="HoodieBlue.jpg">
+                <img src="CarrottBag.png">
 
-                <h4>Cyan Hoodie</h4>
+                <h4>Carrot Tote Bag</h4>
 
-                <p>€40.00</p>
+                <p>€20.00</p>
 
-                <button onclick="addToCart('Cyan Hoodie', 40)">
+                <button onclick="addToCart('Carrot Tote Bag', 20)">
                     Add to Cart
                 </button>
 
@@ -198,13 +364,13 @@
 
             <div class="product">
 
-                <img src="HoodieCream.avif">
+                <img src="CarrottPillow.png">
 
-                <h4>Cream Hoodie</h4>
+                <h4>Carrot Pillow</h4>
 
-                <p>€40.00</p>
+                <p>€20.00</p>
 
-                <button onclick="addToCart('Cream Hoodie', 40)">
+                <button onclick="addToCart('Carrot Pillow', 20)">
                     Add to Cart
                 </button>
 
@@ -213,13 +379,13 @@
 
             <div class="product">
 
-                <img src="HoodieGrey.jpg">
+                <img src="CarrottPoster.png">
 
-                <h4>Grey Hoodie</h4>
+                <h4>Carrot Poster</h4>
 
-                <p>€40.00</p>
+                <p>€15.00</p>
 
-                <button onclick="addToCart('Grey Hoodie', 40)">
+                <button onclick="addToCart('Carrot Poster', 15)">
                     Add to Cart
                 </button>
 
@@ -228,13 +394,13 @@
 
             <div class="product">
 
-                <img src="HoodieOrange.jpg">
+                <img src="CarrottShirt.png">
 
-                <h4>Orange Hoodie</h4>
+                <h4>Carrot Shirt</h4>
 
-                <p>€40.00</p>
+                <p>€25.00</p>
 
-                <button onclick="addToCart('Orange Hoodie', 40)">
+                <button onclick="addToCart('Carrot Shirt', 25)">
                     Add to Cart
                 </button>
 
@@ -245,36 +411,23 @@
     </div>
 
 
+    <!-- Scarecrows -->
+
     <div class="product-section">
 
-        <h3 id="tshirts">T-Shirts</h3>
+        <h3 id="scarecrows">Scarecrows</h3>
 
         <div class="products">
 
             <div class="product">
 
-                <img src="ShirtGrey.jpg">
+                <img src="ScarecrowBag.png">
 
-                <h4>Grey T-Shirt</h4>
-
-                <p>€25.00</p>
-
-                <button onclick="addToCart('Grey T-Shirt', 25)">
-                    Add to Cart
-                </button>
-
-            </div>
-
-
-            <div class="product">
-
-                <img src="ShirtOrange.webp">
-
-                <h4>Salmon T-Shirt</h4>
+                <h4>Scarecrow Tote Bag</h4>
 
                 <p>€25.00</p>
 
-                <button onclick="addToCart('Orange T-Shirt', 25)">
+                <button onclick="addToCart('Scarecrow Tote Bag', 25)">
                     Add to Cart
                 </button>
 
@@ -283,38 +436,13 @@
 
             <div class="product">
 
-                <img src="ShirtPurple.jpg">
+                <img src="ScarecrowMug.png">
 
-                <h4>Maroon T-Shirt</h4>
+                <h4>Scarecrow Coffee Mug</h4>
 
                 <p>€25.00</p>
 
-                <button onclick="addToCart('Maroon T-Shirt', 25)">
-                    Add to Cart
-                </button>
-
-            </div>
-
-        </div>
-
-    </div>
-
-
-    <div class="product-section">
-
-        <h3 id="plushies">Plushies</h3>
-
-        <div class="products">
-
-            <div class="product">
-
-                <img src="Bunny1.jpg">
-
-                <h4>Brown Bunny Plushie</h4>
-
-                <p>€20.00</p>
-
-                <button onclick="addToCart('Brown Bunny Plushie', 20)">
+                <button onclick="addToCart('Scarecrow Coffee Mug', 25)">
                     Add to Cart
                 </button>
 
@@ -323,28 +451,13 @@
 
             <div class="product">
 
-                <img src="Bunny2.jpg">
+                <img src="ScarecrowPhone.png">
 
-                <h4>Grey Bunny Plushie</h4>
+                <h4>Scarecrow Phone Case</h4>
 
-                <p>€20.00</p>
+                <p>€25.00</p>
 
-                <button onclick="addToCart('Grey Bunny Plushie', 20)">
-                    Add to Cart
-                </button>
-
-            </div>
-
-
-            <div class="product">
-
-                <img src="Bunny3.jpeg">
-
-                <h4>White Bunny Plushie</h4>
-
-                <p>€20.00</p>
-
-                <button onclick="addToCart('White Bunny Plushie', 20)">
+                <button onclick="addToCart('Scarecrow Phone Case', 25)">
                     Add to Cart
                 </button>
 

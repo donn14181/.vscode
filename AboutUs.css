@@ -1,3 +1,4 @@
+/* Styles for the main page background and default text */
 body {
     background-color: rgb(31, 88, 104);
     font-family: "Open Sans", sans-serif;
@@ -7,11 +8,13 @@ body {
     color: white;
 }
 
+/* Main page title size */
 h1 {
     font-size: 42px;
     margin-bottom: 10px;
 }
 
+/* Section headings - yellow colour to stand out */
 h2,
 h3,
 h4 {
@@ -20,6 +23,7 @@ h4 {
     font-size: 23px;
 }
 
+/* Body text paragraphs - centred with comfortable line spacing */
 p {
     width: 75%;
     margin: 15px auto;
@@ -27,6 +31,7 @@ p {
     font-size: 18px;
 }
 
+/* Lists - left-aligned even though the page is centred */
 ul {
     display: inline-block;
     text-align: left;
@@ -35,6 +40,7 @@ ul {
     padding-left: 25px;
 }
 
+/* Team member and general images */
 img {
     width: 180px;
     height: 180px;
@@ -43,13 +49,16 @@ img {
     border: 3px solid white;
     border-radius: 12px;
     background-color: rgb(54, 111, 128);
+    /* Smooth scale effect when hovering */
     transition: transform 0.3s;
 }
 
+/* Slightly enlarge image when the user hovers over it */
 img:hover {
     transform: scale(1.08);
 }
 
+/* Row that holds all team member cards side by side */
 .team-row {
     display: flex;
     justify-content: center;
@@ -58,35 +67,42 @@ img:hover {
     margin-bottom: 40px;
 }
 
+/* Individual team member card - centred content */
 .team-member {
     text-align: center;
 }
 
+/* Name label under each team member photo */
 .team-member h6 {
     margin: 10px 0;
     font-size: 18px;
     color: white;
 }
 
+/* Container for the group team photo at the bottom */
 .team-photo {
     text-align: center;
     margin-top: 20px;
 }
 
+/* Label above the group photo */
 .team-photo h6 {
     margin: 10px 0;
     font-size: 18px;
     color: white;
 }
 
+/* Makes the underline on the h1 title a bit thicker */
 h1 u {
     text-decoration-thickness: 3px;
 }
 
+/* Adds a small gap between each list item */
 li {
     margin-bottom: 8px;
 }
 
+/* The green button that opens the dropdown menu */
 .dropbtn {
     background-color: #4CAF50;
     color: white;
@@ -97,6 +113,7 @@ li {
     border-radius: 8px;
 }
 
+/* Fixes the dropdown in the top-right corner of the screen */
 .dropdown {
     position: fixed;
     top: 20px;
@@ -105,6 +122,7 @@ li {
     z-index: 1000;
 }
 
+/* The menu list - hidden by default, shown on hover */
 .dropdown-content {
     display: none;
     position: absolute;
@@ -114,6 +132,7 @@ li {
     box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
 
+/* Each link inside the dropdown */
 .dropdown-content a {
     color: black;
     padding: 12px 16px;
@@ -121,14 +140,17 @@ li {
     display: block;
 }
 
+/* Highlight a link when the user hovers over it */
 .dropdown-content a:hover {
     background-color: #f1f1f1;
 }
 
+/* Show the dropdown list when hovering over the whole dropdown */
 .dropdown:hover .dropdown-content {
     display: block;
 }
 
+/* Darken the button colour when the dropdown is open */
 .dropdown:hover .dropbtn {
     background-color: #3e8e41;
 }

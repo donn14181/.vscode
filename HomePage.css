@@ -217,7 +217,7 @@ body {
     display: flex;
     gap: 30px;
 
-    padding: 20px;
+    padding: 30px;
 }
 
 .info-box {
@@ -338,4 +338,66 @@ body {
         width: 90%;
     }
 
+}
+
+/* Selected edition */
+
+.selected-edition {
+    background-color: rgb(31, 88, 104);
+    border: 2px solid rgb(255, 230, 120);
+    border-radius: 10px;
+    padding: 12px 18px;
+    margin-top: 20px;
+    min-height: 25px;
+}
+
+
+.selected-edition p {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(255, 230, 120);
+}
+
+
+/* Selected edition box */
+
+.edition.selected {
+    background-color: rgb(255, 230, 120);
+    color: black;
+    transform: translateX(5px);
+}
+
+
+.edition.selected strong {
+    color: black;
+}
+
+
+/* Add to cart button */
+
+.add-game-button {
+    background-color: rgb(255, 230, 120);
+    color: black;
+    border: none;
+    border-radius: 25px;
+    padding: 14px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+
+.add-game-button:hover {
+    background-color: white;
+    transform: scale(1.05);
+}
+
+
+.add-game-button:disabled {
+    background-color: rgb(100, 120, 125);
+    color: rgb(200, 200, 200);
+    cursor: not-allowed;
+    transform: none;
 }
